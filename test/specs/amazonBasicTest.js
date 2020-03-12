@@ -15,10 +15,10 @@ describe("Amazon app script", () => {
   it('should find the product', () => {
     const searchField = $('//input[@id="twotabsearchtextbox"]');
     const submitBtn = $('//input[@type="submit"]');
-    const title = 'Amazon.com: pencil';
     searchField.setValue('pencil');
     submitBtn.click();
-    browser.waitUntil(() => (browser.getTitle() == title ), 3000);
+    browser.waitUntil(() => $('//span[@cel_widget_id="PAGINATION-PAGINATION"]').isDisplayed()
+      , 3000);
   });
 
   it('should sort searched products by decreasing price', () => {
