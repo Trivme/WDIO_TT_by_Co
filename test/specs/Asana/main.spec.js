@@ -75,7 +75,7 @@ describe("Smoke testing for Asana webApp", () => {
 //  });
 
   //***************************
-  // footer by Anna Strik
+  // footer
 
 //  it('should send http request for all footer links and get success response', async () => {
 //    const response = await axios({
