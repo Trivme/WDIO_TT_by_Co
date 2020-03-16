@@ -139,7 +139,7 @@ var MainPage = /*#__PURE__*/function (_Page) {
 
   _createClass(MainPage, [{
     key: "open",
-    value: function open(path) {
+    value: function open() {
       _get(_getPrototypeOf(MainPage.prototype), "open", this).call(this, 'https://asana.com/');
     }
   }, {

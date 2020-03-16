@@ -2,8 +2,8 @@ import Page from './Page'
 
 class MainPage extends Page {
 
-  open(path) {
-    super.open('https://asana.com/');
+  open() { 
+    super.open('https://asana.com/'); 
   }
 
   get h1() {
