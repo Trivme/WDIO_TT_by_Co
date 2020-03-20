@@ -7,4 +7,4 @@ module.exports = {
     }
   }]]
 };
-//# sourceMappingURL=.babel.config.js.map
+//# sourceMappingURL=babel.config.js.map

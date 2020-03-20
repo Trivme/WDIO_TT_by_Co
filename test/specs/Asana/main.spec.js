@@ -1,40 +1,37 @@
 const {expect} = require('chai');
-//import MainPage from './MainPage';
+import MainPage from './MainPage';
 //import axios from 'axios';
 
-//describe('ASANA testing', () => {
-//    before('open page', () => {
-//      MainPage.open();
-//    });
-//    it('should wait correct Page title', () => {
-//      browser.waitUntil(() => MainPage.H1.isDisplayed());
-//      //=== 'Make more time for the work that matters most', 5000); 
-//    });  
-//}); 
+describe('ASANA testing', () => {
+    before('open page', () => {
+     MainPage.open();
+    });
+
+    it('should wait correct Page title', () => {
+      browser.waitUntil(() => MainPage.h1.isDisplayed(), 5000);
+      expect(MainPage.h1).eq('Make more time for the work that matters most'); 
+    });  
+}); 
 
 describe("Smoke testing for Asana webApp", () => {
   before(() => {
     browser.url("https://asana.com/")
     browser.maximizeWindow();
+    browser.pause(5000);
   });
 
   it('should wait correct page title', () => {
     browser.waitUntil(() => $('//h1').isDisplayed(), 5000);
 
     const title = $('h1');
-    try {
-      expect(title.getText()).eq('Make more time for the work that matters most');
-      expect(title.getText()).eq('Keep your team organized and connected');
-    } catch (err) {
-      console.log('Changed title');
-    }
+    //expect(title.getText()).eq('Make more time for the work that matters most');
+    expect(title.getText()).eq('Keep your team organized and connected');
   });
 
   it('should open Why Asana menu', () => {
-    $('//button[@id="mobileNavToggle"]').click();
-  //  $('//div[@id="navigation__dropdown-why-asana"]').waitForDisplayed();
-    $('//div[@id="navigation__dropdown-why-asana"]').click();
-    browser.pause(5000);
+    //$('//button[@id="mobileNavToggle"]').click();
+    $('//button[@id="navigation__dropdown-toggle-why-asana"]').click();
+    browser.pause(3000);
 
     //expect($('//h3[@id="navigation__dropdown__column-label-overview"]').getText()).eq('Overview');
   });
