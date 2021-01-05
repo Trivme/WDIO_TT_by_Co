@@ -24,7 +24,7 @@
     "wdio-chromedriver-service": "^5.0.2"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chai": "^4.2.0",
     "lodash": "^4.17.15",
     "mocha": "^7.1.0"
